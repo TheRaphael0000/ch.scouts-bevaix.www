@@ -59,5 +59,9 @@ TELEGRAM_ALLOWED_USERS = [
     {
         "chatId": "7151448698",
         "name": "Nathalie"
+    },
+    {
+        "chatId": "6569272664",
+        "name": "Auréliane"
     }
 ]

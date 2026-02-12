@@ -5,7 +5,7 @@ import fabric
 
 
 def deploy(c):
-    with c.cd("/opt/www.scouts-bevaix.ch"):
+    with c.cd("/opt/ch.scouts-bevaix.www"):
         c.run("git status")
         if not click.confirm("Stash and deploy to main ?", default=True):
             exit()

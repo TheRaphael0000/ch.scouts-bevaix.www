@@ -1,3 +1,5 @@
 db.sqlite3
 google_token.json
 .env
+imgs
+venv

@@ -1,8 +1,12 @@
-from scoutsbevaix.config import TELEGRAM_API_KEY
+import dotenv
+import os
 
 from telegram import Update
 from telegram.ext import Application, MessageHandler, filters
 
+dotenv.load_dotenv()
+
+TELEGRAM_API_KEY = os.getenv("TELEGRAM_API_KEY")
 
 async def handler(update, context):
     msg = update.message

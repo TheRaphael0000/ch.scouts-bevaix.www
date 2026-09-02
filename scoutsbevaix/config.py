@@ -53,7 +53,7 @@ GOOGLE_CREDS = "google_token.json"
 
 TELEGRAM_ALLOWED_USERS = [
     {
-        "chatId": "675387676",
+        "chatId": "8683493397",
         "name": "Raphaël"
     },
     {

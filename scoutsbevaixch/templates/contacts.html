@@ -7,7 +7,9 @@
 {% endblock %}
 
 {% block main %}
+
 <div class="row row-cols-md-3">
+  <script>window.history.replaceState({}, '', window.location.pathname);</script>
   {% for contact in contacts %}
   <div class="col mb-3">
     <div class="card">
@@ -18,7 +20,7 @@
         {% endif %}
         <p class="card-text">
           {% if contact.other %}
-          <h6 class="text-danger">{{ contact.other }}</h5>
+        <h6 class="text-danger">{{ contact.other }}</h5>
           {% endif %}
           {% if contact.nom %}
           <i class="fas fa-user"></i> {{ contact.nom }}<br>
@@ -29,9 +31,26 @@
           {% if contact.telephone %}
           <i class="fas fa-phone"></i> {{ contact.telephone }}<br>
           {% endif %}
-        <p class="card-text">
+          <p class="card-text">
       </div>
     </div>
+  </div>
+  {% empty %}
+  <div class="w-100">
+    <p>
+      Pour accéder aux informations de contact, veuiller copier l'image ci-dessous.
+    </p>
+    <form>
+      <img src="data:image/png;base64,{{ captcha_image }}" />
+      <input name="id" value="{{ captcha_id }}" type="hidden">
+      <input name="value" value="" autofocus />
+      <button>
+        Valider
+      </button>
+    </form>
+    {%if captcha_try %}
+    Réponse invalide ou image expirée.
+    {% endif %}
   </div>
   {% endfor %}
 </div>

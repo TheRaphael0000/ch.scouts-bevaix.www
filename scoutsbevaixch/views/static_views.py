@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.conf import settings
 
 
 def accueil(request):
@@ -24,7 +23,3 @@ def emplacement(request):
 
 def locations(request):
     return render(request, "locations.html")
-
-
-def contacts(request):
-    return render(request, "contacts.html", context={"contacts": settings.CONTACTS})

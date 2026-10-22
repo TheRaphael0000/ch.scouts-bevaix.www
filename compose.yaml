@@ -1,6 +1,6 @@
 services:
     web:
-        build: ghcr.io/theraphael0000/ch.scouts-bevaix.www:latest
+        image: ghcr.io/theraphael0000/ch.scouts-bevaix.www:latest
         container_name: scoutsbevaixch
         env_file: ".env"
         volumes:

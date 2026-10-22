@@ -9,6 +9,4 @@ RUN pip install .
 
 COPY . .
 
-RUN python manage.py migrate
-
 CMD ["sh", "./start.sh"]

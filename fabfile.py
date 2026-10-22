@@ -12,7 +12,8 @@ def deploy(c):
         c.run("git stash")
         c.run("git checkout main")
         c.run("git pull")
-        c.run("docker compose up -d --build")
+        c.run("docker compose pull")
+        c.run("docker compose up -d")
 
 
 c = fabric.Connection(host="scouts-bevaix.ch", user="root", port=22)

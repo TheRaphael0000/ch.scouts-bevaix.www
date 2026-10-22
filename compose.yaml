@@ -1,6 +1,6 @@
 services:
     web:
-        build: .
+        build: ghcr.io/theraphael0000/ch.scouts-bevaix.www:latest
         container_name: scoutsbevaixch
         env_file: ".env"
         volumes:
@@ -12,6 +12,6 @@ services:
         restart: unless-stopped
 
 networks:
-  nginx:
-    external: true
-    name: nginx
+    nginx:
+        external: true
+        name: nginx
